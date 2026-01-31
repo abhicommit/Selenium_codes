@@ -18,11 +18,19 @@ public class ClickActions {
 		 
 		 driver.get("https://automationwithpiyush.vercel.app/actions.html");
 		 
-		Actions act =new  Actions(driver);
+		  Actions act =new  Actions(driver);
 		 
 		  WebElement exit=  driver.findElement(By.id("click-box"));
+		 
 		  
-		  act.click(exit).build().perform();
+		  // Hover to perticular element
+		  
+		   act.moveToElement(exit).build().perform();
+		  
+		   // Left Click on Element
+		  
+		  
+		    act.click(exit).build().perform();
 		 
 		 Thread.sleep(2000);
 		 
